@@ -1,6 +1,7 @@
 package com.automatedtest.infrastructure.driver;
 
 import io.cucumber.java.Before;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -22,11 +23,13 @@ public class Setup {
         if (browser == null) {
             browser = "chrome";
         }
-        System.setProperty("webdriver.chrome.driver", baseLocation + "/src/test/resources/executables/chromedriver");
-        System.setProperty("webdriver.gecko.driver", baseLocation + "/src/test/resources/executables/geckodriver");
+       // System.setProperty("webdriver.chrome.verboseLogging", "true");
+       // System.setProperty("webdriver.chrome.driver", baseLocation + "//src//test//resources//executables//chromedriver.exe");
         switch (browser) {
             case "chrome":
+                WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--remote-allow-origins=*");
                 chromeOptions.addArguments("['start-maximized']");
                 driver = new ChromeDriver(chromeOptions);
                 break;

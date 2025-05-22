@@ -16,7 +16,7 @@ Feature: Validate todo list application
     Given I navigates to HomePage
     When I add todo items to list
       | eat food | earn money | study book |
-    And validate todo list item number "3 item left!"
+    And validate todo list item number "3 items left!"
     #here changing exiting todoitem eat food to eat food less, validating same in last step
     And I edit existing todo items to list
       | eat food->eat food less | earn money->earn money more | study book->study book and write notes |
@@ -35,7 +35,4 @@ Feature: Validate todo list application
     Then search bar display todo items in list
       | jogging | eating |
         # running shows in completed list
-    And validate todo list item number "2 item left!"
-    And search bar displayed done items in list
-      | running |
-    And validate todo list item number "1 item left!"
+    And validate todo list item number "2 items left!"

@@ -1,0 +1,678 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2025-05-22T05:54:33.537Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2976429900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.automatedtest.infrastructure.driver.Setup.setWebDriver()"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "As todoMVC user add 5 todo items and remove 2 todo items",
+        "description": "",
+        "id": "validate-todo-list-application;as-todomvc-user-add-\u003cadd\u003e-todo-items-and-remove-\u003cremove\u003e-todo-items;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 235671400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.automatedtest.infrastructure.driver.TearDown.quitDriver(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 476587300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I navigates to HomePage",
+            "match": {
+              "location": "com.automatedtest.steps.HomePageSteps.a_todoMVC_user_navigates_to_HomePage()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 99830400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "com.automatedtest.infrastructure.driver.Hooks.beforeEachStep(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 887935100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I add 5 todo items to list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 6
+                }
+              ],
+              "location": "com.automatedtest.steps.HomePageSteps.user_add_todo_items_to_list(java.lang.Integer)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 152096400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "com.automatedtest.infrastructure.driver.Hooks.beforeEachStep(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 457282600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I remove 2 todo items to list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 9
+                }
+              ],
+              "location": "com.automatedtest.steps.HomePageSteps.user_remove_todo_items_to_list(java.lang.Integer)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 130943500,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "com.automatedtest.infrastructure.driver.Hooks.beforeEachStep(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 25009000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "todo list is displayed with 3 items",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 28
+                }
+              ],
+              "location": "com.automatedtest.steps.HomePageSteps.search_bar_is_displayed_items_in_list(java.lang.Integer)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 115264200,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "com.automatedtest.infrastructure.driver.Hooks.beforeEachStep(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validate_todo_count"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-05-22T05:54:39.216Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1181183300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.automatedtest.infrastructure.driver.Setup.setWebDriver()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "As todoMVC user add 20 todo items and remove 5 todo items",
+        "description": "",
+        "id": "validate-todo-list-application;as-todomvc-user-add-\u003cadd\u003e-todo-items-and-remove-\u003cremove\u003e-todo-items;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 204089500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.automatedtest.infrastructure.driver.TearDown.quitDriver(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 436075500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I navigates to HomePage",
+            "match": {
+              "location": "com.automatedtest.steps.HomePageSteps.a_todoMVC_user_navigates_to_HomePage()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 168865600,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "com.automatedtest.infrastructure.driver.Hooks.beforeEachStep(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3552091100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I add 20 todo items to list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "20",
+                  "offset": 6
+                }
+              ],
+              "location": "com.automatedtest.steps.HomePageSteps.user_add_todo_items_to_list(java.lang.Integer)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 133454300,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "com.automatedtest.infrastructure.driver.Hooks.beforeEachStep(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1309579800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I remove 5 todo items to list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 9
+                }
+              ],
+              "location": "com.automatedtest.steps.HomePageSteps.user_remove_todo_items_to_list(java.lang.Integer)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 129426600,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "com.automatedtest.infrastructure.driver.Hooks.beforeEachStep(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 25992900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "todo list is displayed with 15 items",
+            "match": {
+              "arguments": [
+                {
+                  "val": "15",
+                  "offset": 28
+                }
+              ],
+              "location": "com.automatedtest.steps.HomePageSteps.search_bar_is_displayed_items_in_list(java.lang.Integer)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 107973300,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "com.automatedtest.infrastructure.driver.Hooks.beforeEachStep(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validate_todo_count"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-05-22T05:54:46.478Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1030957100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.automatedtest.infrastructure.driver.Setup.setWebDriver()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "As todoMVC user change existing todo items",
+        "description": "",
+        "id": "validate-todo-list-application;as-todomvc-user-change-existing-todo-items",
+        "after": [
+          {
+            "result": {
+              "duration": 203840000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.automatedtest.infrastructure.driver.TearDown.quitDriver(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 407758000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I navigates to HomePage",
+            "match": {
+              "location": "com.automatedtest.steps.HomePageSteps.a_todoMVC_user_navigates_to_HomePage()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 115739300,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "com.automatedtest.infrastructure.driver.Hooks.beforeEachStep(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 495959800,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I add todo items to list",
+            "match": {
+              "location": "com.automatedtest.steps.HomePageSteps.user_add_todo_items_to_list(io.cucumber.datatable.DataTable)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 139255500,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "com.automatedtest.infrastructure.driver.Hooks.beforeEachStep(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "eat food",
+                  "earn money",
+                  "study book"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 111035600,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "validate todo list item number \"3 items left!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"3 items left!\"",
+                  "offset": 31
+                }
+              ],
+              "location": "com.automatedtest.steps.HomePageSteps.search_bar_displayed_done_items_in_list(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 94733000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "com.automatedtest.infrastructure.driver.Hooks.beforeEachStep(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 253409200,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "I edit existing todo items to list",
+            "match": {
+              "location": "com.automatedtest.steps.HomePageSteps.user_edit_todo_items_to_list(io.cucumber.datatable.DataTable)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 123716900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "com.automatedtest.infrastructure.driver.Hooks.beforeEachStep(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "eat food-\u003eeat food less",
+                  "earn money-\u003eearn money more",
+                  "study book-\u003estudy book and write notes"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 56999800,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "search bar display todo items in list",
+            "match": {
+              "location": "com.automatedtest.steps.HomePageSteps.search_bar_is_displayed_in_list(io.cucumber.datatable.DataTable)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 109432900,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "com.automatedtest.infrastructure.driver.Hooks.beforeEachStep(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "eat food less",
+                  "earn money more",
+                  "study book and write notes"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validate_todo_edit"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-05-22T05:54:49.629Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1021993100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.automatedtest.infrastructure.driver.Setup.setWebDriver()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "As todoMVC user check done items",
+        "description": "",
+        "id": "validate-todo-list-application;as-todomvc-user-check-done-items",
+        "after": [
+          {
+            "result": {
+              "duration": 220898900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.automatedtest.infrastructure.driver.TearDown.quitDriver(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 339069000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I navigates to HomePage",
+            "match": {
+              "location": "com.automatedtest.steps.HomePageSteps.a_todoMVC_user_navigates_to_HomePage()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 168750700,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "com.automatedtest.infrastructure.driver.Hooks.beforeEachStep(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 471862800,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "I add todo items to list",
+            "match": {
+              "location": "com.automatedtest.steps.HomePageSteps.user_add_todo_items_to_list(io.cucumber.datatable.DataTable)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 127404200,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "com.automatedtest.infrastructure.driver.Hooks.beforeEachStep(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "running",
+                  "jogging",
+                  "eating"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 194914300,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "I check the todo list items",
+            "match": {
+              "location": "com.automatedtest.steps.HomePageSteps.i_check_the_todo_list_items(io.cucumber.datatable.DataTable)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 110389400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "com.automatedtest.infrastructure.driver.Hooks.beforeEachStep(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "running"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 52215900,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "search bar display todo items in list",
+            "match": {
+              "location": "com.automatedtest.steps.HomePageSteps.search_bar_is_displayed_in_list(io.cucumber.datatable.DataTable)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 150199500,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "com.automatedtest.infrastructure.driver.Hooks.beforeEachStep(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "jogging",
+                  "eating"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 65547400,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "validate todo list item number \"2 items left!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2 items left!\"",
+                  "offset": 31
+                }
+              ],
+              "location": "com.automatedtest.steps.HomePageSteps.search_bar_displayed_done_items_in_list(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 128209400,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "com.automatedtest.infrastructure.driver.Hooks.beforeEachStep(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@validate_check_done_items"
+          }
+        ]
+      }
+    ],
+    "name": "Validate todo list application",
+    "description": "",
+    "id": "validate-todo-list-application",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/com/automatedtest/Home_page.feature",
+    "tags": []
+  }
+]

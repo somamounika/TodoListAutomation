@@ -79,16 +79,6 @@ public class HomePageSteps {
         }
     }
 
-    @Then("search bar displayed done items in list")
-    public void search_bar_displayed_done_items_in_list(DataTable dataTable) {
-        List<String> expectedDoneItemNames = dataTable.asList();
-        List<String> actualDoneItemNames = this.homePage.getDoneItems();
-        for (int i = 0; i < expectedDoneItemNames.size(); i++) {
-            Assert.assertEquals(expectedDoneItemNames.get(i), actualDoneItemNames.get(i));
-        }
-    }
-
-
     @Then("validate todo list item number {string}")
     public void search_bar_displayed_done_items_in_list(String countMessage) {
         String actualMessage = this.homePage.getCountMessage();

@@ -1,6 +1,7 @@
 package com.automatedtest.infrastructure.driver;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -8,38 +9,38 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.time.temporal.TemporalUnit;
 import java.util.List;
 
 public class Wait {
 
-    private WebDriver driver;
+    private final WebDriver driver;
 
     public Wait(WebDriver driver) {
         this.driver = driver;
     }
 
-    private void waitUntilCondition(ExpectedCondition condition, String timeoutMessage, int timeout) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeout));
+    private <T> void waitUntilCondition(ExpectedCondition<T> condition, String timeoutMessage, int timeoutInSeconds) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
         wait.withMessage(timeoutMessage);
         wait.until(condition);
     }
 
-    public void forLoading(int timeout) {
-        ExpectedCondition<Object> condition = ExpectedConditions.jsReturnsValue("return document.readyState==\"complete\";");
-        String timeoutMessage = "Page didn't load after " + Integer.toString(timeout) + " seconds.";
-        waitUntilCondition(condition, timeoutMessage, timeout);
+    public void forLoading(int timeoutInSeconds) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds));
+        wait.withMessage("Page didn't load after " + timeoutInSeconds + " seconds.");
+        wait.until(webDriver -> ((JavascriptExecutor) webDriver)
+                .executeScript("return document.readyState").equals("complete"));
     }
 
-    public void forElementToBeDisplayed(int timeout, WebElement webElement, String webElementName) {
+    public void forElementToBeDisplayed(int timeoutInSeconds, WebElement webElement, String webElementName) {
         ExpectedCondition<WebElement> condition = ExpectedConditions.visibilityOf(webElement);
-        String timeoutMessage = webElementName + " wasn't displayed after " + Integer.toString(timeout) + " seconds.";
-        waitUntilCondition(condition, timeoutMessage, timeout);
+        String timeoutMessage = webElementName + " wasn't displayed after " + timeoutInSeconds + " seconds.";
+        waitUntilCondition(condition, timeoutMessage, timeoutInSeconds);
     }
 
-    public void forPresenceOfElements(int timeout, By elementLocator, String elementName) {
+    public void forPresenceOfElements(int timeoutInSeconds, By elementLocator, String elementName) {
         ExpectedCondition<List<WebElement>> condition = ExpectedConditions.presenceOfAllElementsLocatedBy(elementLocator);
-        String timeoutMessage = elementName + " elements were not displayed after " + Integer.toString(timeout) + " seconds.";
-        waitUntilCondition(condition, timeoutMessage, timeout);
+        String timeoutMessage = elementName + " elements were not present after " + timeoutInSeconds + " seconds.";
+        waitUntilCondition(condition, timeoutMessage, timeoutInSeconds);
     }
 }

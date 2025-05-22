@@ -7,9 +7,7 @@ public class Hooks {
 
     @AfterStep
     public void beforeEachStep(Scenario sc){
-        if(sc.isFailed()) {
             ScreenShotUtil.takeScreenshot();
-        }
     }
 
 }

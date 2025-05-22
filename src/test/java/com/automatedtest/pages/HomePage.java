@@ -18,20 +18,17 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//li[@data-testid='todo-item']")
     private List<WebElement> todoItems;
 
-    @FindBy(id = "#todo-input")
+    @FindBy(css = "#todo-input")
     private WebElement searchInput;
 
     @FindBy(xpath = "//button[@class='destroy']")
     private List<WebElement> removedItems;
 
-    @FindBy(css = "li[class=completed] label")
+    @FindBy(css = "li[class='completed'] label")
     private List<WebElement> completedItems;
 
     @FindBy(xpath = "//li[@class!='completed' and @data-testid='todo-item']//label")
     private List<WebElement> existingItemsByName;
-
-    @FindBy(xpath = "//li[@class='todo completed']//label")
-    private List<WebElement> doneItems;
 
 
     @FindBy(css = "span[class='todo-count']")
@@ -43,7 +40,7 @@ public class HomePage extends BasePage {
 
     public void goToHomePage() {
         driver.get(HOME_PAGE_URL);
-        wait.forElementToBeDisplayed(5, this.searchInput, "searchBox");
+        wait.forElementToBeDisplayed(10, this.searchInput, "searchBox");
     }
 
     public void addItem(int itemCount) {
@@ -81,8 +78,15 @@ public class HomePage extends BasePage {
         return existingItemsByName.stream().map(WebElement::getText).collect(Collectors.toList());
     }
 
-    public List<String> getDoneItems() {
-        return doneItems.stream().map(WebElement::getText).collect(Collectors.toList());
+    public List<String> getDoneItems()  {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        List<WebElement> completedList = driver.findElements(By.cssSelector("li[class='completed'] label"));
+        return completedList.stream().map(WebElement::getText).collect(Collectors.toList());
+
     }
 
     public Integer getToDoItemCount() {
@@ -102,7 +106,7 @@ public class HomePage extends BasePage {
     }
 
     public String getCountMessage() {
-        wait.forElementToBeDisplayed(5, this.todoCountMessage, "searchBox");
+        wait.forElementToBeDisplayed(10, this.todoCountMessage, "message");
         return todoCountMessage.getText();
     }
 }
